@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   // {
   //   "category_name": "Lingerie",
   // }
@@ -63,7 +63,7 @@ router.put('/:id', (req, res) => {
   }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id',async (req, res) => {
   try {
     const categoryData = await Category.destroy({
       where: {
